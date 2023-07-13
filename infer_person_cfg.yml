@@ -1,0 +1,30 @@
+region_polygon: [] # 多边形，坐标x1,y1,x2,y2....
+#secs_interval:   # 1000ms->25帧，fps:25; 50ms->1.25帧
+frame_interval: 10 #
+classes: ['person']
+moving_avg: True # 若抽帧特别多，则不建议使用moving_avg
+
+YOLOV5:
+  model_dir: weights/yolov5s-640-640.rknn
+  size: 640
+  batch_size: 1
+  obj_thresh: 0.25
+  nms_thresh: 0.45
+  enable: True
+
+YOLOV7:
+  model_dir: weights/
+  size: 640
+  batch_size: 1
+  obj_thresh: 0.25
+  nms_thresh: 0.45
+  enable: False
+
+YOLOX:
+  model_dir: weights
+  size: 640
+  batch_size: 1
+  obj_thresh: 0.25
+  nms_thresh: 0.45
+  enable: False
+
